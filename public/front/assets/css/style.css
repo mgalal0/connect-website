@@ -1,0 +1,1023 @@
+:root{
+    --main-color: #314C9F;
+    --body-color: #EEEEEE;
+    --text-color:#000;
+    --alt-text-color: #9F9F9F;
+
+    
+}
+
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+ 
+    /* overflow-x: hidden; */
+}
+body{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--body-color);
+    font-family: 'Readex Pro', sans-serif;
+   
+}
+.active{
+
+    font-weight: 700 !important ;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight:700;
+    line-height: 1.5;
+    color:#fff;
+}
+h2{
+    font-size: 3rem;
+    font-weight:700;
+    line-height: 1.6;
+    color:var(--main-color);
+   
+  
+}
+p{
+    color: var(--alt-text-color);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+a{
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400;
+}
+a:hover{
+    color: var(--text-color) !important;
+
+}
+section{
+    padding-top: 6rem ;
+    overflow: hidden;
+ 
+}
+.container-with-right-img{
+  width: 80%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+}
+.container-with-left-img{
+  width: 80%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.left-side-img img , .right-side-img img{
+    width: 100%;
+    overflow: hidden;
+}
+
+@media(max-width:992px){
+    .container-with-left-img , .container-with-right-img{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+     
+    }
+   
+    .left-side-img , .right-side-img  {
+      display: none;
+    }
+    .mob-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mob-img img{
+        width: 80%;
+        display: block !important;
+        margin-top: 2rem;
+    }
+
+
+}
+@media(max-width:300px) {
+    html {
+        font-size: 11px
+    }
+}
+
+@media(max-width:567px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media(min-width:992px) {
+    html {
+        font-size: 16px
+    }
+}
+
+
+/* start spinner -------------------------------------- */
+#loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.spinner {
+    width: 4rem;
+    height: 4rem;
+    border: 5px solid #fff;
+    border-top: 5px solid var(--main-color);
+    border-radius: 50%;
+    animation: 1s linear infinite spin
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+/* navbar style ------------------------------------ */
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    padding-top: 2rem !important;
+    background-color: var(--body-color) !important;
+   
+  
+}
+.navbar a{
+    color: var(--text-color) !important ;
+    font-size: 1.25rem !important;
+    font-weight: 400;
+    margin: 0.25rem !important;
+    transition: 1s all;
+}
+.navbar a:hover{
+    color: var(--main-color) !important;
+}
+
+.navbar i{
+    font-size: 2.25rem ;
+    color: var(--main-color);
+}
+
+
+@media (max-width:992px){
+    .navbar img{
+        width: 80% !important;
+    }
+
+}
+
+/* start banner style ---------------------------------------- */
+.hero{
+    position: relative;
+    overflow: hidden;
+}
+.hero .video-container{
+    position: relative;
+    height: 135vh;
+    width: 100%;
+}
+.hero .video-container video{
+    height: 100%;
+}
+.hero .video-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+ .banner{
+     background-image: url('../images/banner-bg.png');
+     background-size: cover;
+     background-repeat: no-repeat;
+     position: absolute;
+     top: 15rem;
+     height: 110vh;
+     width: 100%;
+}
+
+.banner-mob{
+    background-image: url('../images/banner-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+@media(max-width:768px){
+    .banner-mob{
+      display: block !important;
+      width: 100%;
+    }
+}
+
+.video-container .banner-img{
+    position: absolute;
+    top: 30%;
+}
+
+.video-container .banner-img img{
+    width: 40%;
+}
+
+
+ .banner-img{
+    position: relative;
+    bottom: 6rem;
+    width: 100%;
+    left: 8rem;
+    margin: auto;
+
+ } 
+ .banner-img img{
+    width: 100%;
+ }
+
+
+
+.banner .banner-content{
+   
+    background-color: rgb(4, 26, 4);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 8rem;
+    z-index: 66;
+    max-width:26rem 
+}
+
+.banner-content p{
+    font-size: 1rem;
+
+}
+@media(max-width:992px){
+    .banner{
+        background-size: contain;
+        height: 50vh;
+        margin-top: 2rem;
+    }
+    .banner .banner-content{
+        display: none;
+    }
+    .banner-img{
+        display: none;
+    }
+  
+    .banner-img-mob img{
+        display:  block !important;
+        width: 80% !important;
+        
+    }
+
+     .banner-img img{
+        width: 75% !important;
+    }
+
+    .hero .video-container{
+        height: 70vh;
+    }
+    .video-container{
+        position: relative;
+    }
+    .video-container .over-lay {
+        position: absolute;
+        top: 0;
+        display: flex;
+        padding-top: 5rem;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .banner-img-mob{
+       
+        width: 95% !important;
+    }
+    .banner-mob{
+        position: relative;
+        bottom: 12rem;
+        height: 35vh;
+        display: block !important;
+    }
+    .banner{
+        display: none;
+    }
+   
+} 
+
+@media(min-width:768px) and (max-width:992px){
+    .banner-mob{
+       height: 50vh;
+       bottom: 16rem;
+    }
+    .banner-img-mob{
+        margin-top: 2rem;
+        width: 80% !important;
+    }
+}
+
+
+
+/* start about us section ----------------------------------------- */
+.about{
+    padding-top: 6rem;
+}
+.about h2{
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--main-color);
+
+}
+.about .title{
+    width: 30%;
+}
+.about .content{
+    width:40%;
+    padding-left: 3rem;
+}
+.about .line{
+    height: 20rem;
+    width: 0.5rem;
+    background-color: var(--main-color);
+}
+.about p{
+    font-size: 1.5rem !important;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+/* media query for about-us section --------------------------- */
+@media(max-width:992px){
+    .about{
+        padding-left:1rem;
+        padding-right: 1rem;
+        padding-top: 8rem;
+  
+    }
+    .about .line{
+        width:16rem;
+        height: 0.5rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+    .about .about-content{
+        width: 100%;
+    }
+    .about h2{
+        font-size: 3rem;
+    }
+    .about p{
+        font-size: 0.75rem;
+    }
+    .about .title{
+        width: 80%;
+    }
+    .about .content{
+        width: 100%;
+       
+    }
+    .about .content p{
+        font-weight: 400;
+    }
+    .about-content{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+ 
+}
+
+/* start our-services-section----------------------------------- */
+.our-services{
+    position: relative;
+    overflow: hidden;
+}
+.our-services h2{
+    text-transform: capitalize;
+}
+.our-services .container-with-left-image{
+    margin-bottom: 5rem ;
+}
+.our-services .container-with-right-image{
+    margin-bottom: 5rem ;
+}
+.our-services .bg{
+    position: relative;
+    display: inline-block;
+}
+.our-services .left-bg , .our-services .right-bg
+{
+    width: 95% !important;
+}
+.our-services .left-overlay-img{
+    position: absolute;
+    left: 27%;
+    width: 65%;
+}
+
+.our-services .right-overlay-img{
+    position: absolute;
+    right: 27%;
+    width: 65%;
+}
+
+
+.our-services .container-with-left-image .content{
+    padding-right: 6rem;
+}
+.our-services .container-with-right-image .content{
+   padding-left: 6rem;
+}
+
+
+@media(max-width:992px){
+    .our-services .container-with-left-image .content{
+        padding-right: 0;
+   }
+   .our-services .container-with-right-image .content{
+       padding-left: 0;
+   }
+    .our-services .bg {
+        display: none;
+    }
+  
+    .our-services .mob-img{
+        display: block !important;
+    }
+    .our-services .container-with-left-image , .our-services .container-with-right-image{
+        margin: 5%  ;
+    }
+    .social-media-content{
+        padding-left: 1rem;
+    }
+ 
+}
+
+/* start why-connect layer  -------------------------------------- */
+.connect{
+    background-image: url('../images/pattern-image.png');
+    height: 270vh;
+    background-size: cover;
+    padding: 0;
+
+    background-repeat: no-repeat;
+    position: relative;
+}
+.connect .man-img img{
+    width: 90% !important;
+}
+.connect .woman-img{
+    position: absolute;
+    right: 0;
+}
+.connect .woman-img img{
+    position: absolute;
+    right:0 ;
+    width: 16rem !important;
+    
+}
+.connect .first-row p{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #314C9F99;
+}
+.connect .sec-row  h2{
+    color: #fff;
+}
+
+.connect .sec-row  p{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+@media(max-width:992px){
+  .connect{
+    height: 240vh;
+  }
+    .connect .woman-img {
+        display: none;
+    }
+    .connect .man-img {
+        display: none;
+    }
+    .connect .first-row{
+        position: absolute;
+        top: 25%;
+        padding:  0 1.5rem;
+    }
+    .connect .sec-row{
+        position: absolute;
+        top: 42%;  
+        padding:  0 1.5rem;    
+    }
+    .connect .sec-row p{
+        font-size: 0.95rem;
+}}
+@media(min-width:992px) and (max-width:1280px){
+    .connect{
+        overflow: hidden !important ;  
+    }
+    .connect .first-row {
+        position: absolute;
+        top: 10%;
+        padding:  0 1.5rem;
+        
+    }
+    .connect .sec-row {
+        position: absolute;
+        top: 41%;  
+        padding:  0 1.5rem;  
+      
+    }
+    .connect .sec-row p{
+        font-size: 0.95rem;
+}
+}
+/* start our parteners section ---------------------------------- */
+
+.parteners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x;
+    cursor: grab;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* for firefox */
+  }
+  .parteners::-webkit-scrollbar { /* for chrome */
+    display: none;
+  }
+  
+  /* Element styles */
+  .parteners .img-box {
+    /* aspect-ratio: 1 / 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    scroll-snap-align: start;
+    font-weight: 600;
+    user-select: none;
+    width: 20%;
+
+ 
+  }
+  .parteners .img-box img{
+
+  width: 100%;
+  }
+  
+  @media(max-width:992px){
+    .our-projects{
+    padding-left: 0;
+    padding-right: 0;
+    }
+    .our-projects .container{
+        width: 100% !important;
+    }
+    .parteners .img-box{
+        width: 100% ;
+    }
+    .parteners .img-box img{
+        width: 14rem;
+    }
+    .parteners{
+  
+        display: none !important;
+  
+    }
+    .partners-carousel-container{
+        display: block !important;
+    }
+  }
+
+  /* start brand activation style  ---------------------------------- */
+.brand-banner{
+    position: relative;
+  
+
+}
+.brand-banner .banner-content{
+    padding-left: 20%;
+}
+.brand-banner .right-side-img{
+    position: relative;
+    right:0;
+    width: 35%;
+    bottom: 5rem;
+    display: inline-block;
+}
+.brand-banner .right-side-img img{
+  width: 70%;
+}
+
+.brand-banner .img-layer{
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 60%;
+}
+/* media query for brand-banner ------------------- */
+@media(max-width:992px){
+    .brand-banner {
+        padding-bottom: 0;
+    }
+    .brand-banner h2{
+        margin-top: 1rem;
+    }
+    .brand-banner {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .brand-banner .content{
+        width: 100%;
+     
+    }
+    .brand-banner .row{
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+  .right-side-img{
+    display: none !important;
+  }
+  .brand-banner .img-box img{
+    display: block !important;
+    margin-top: 3rem;
+    width: 73%;
+  }
+
+    
+}
+/* start brand-gallery-style ------------------------------------ */
+
+.brand-gallery .imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding-top: 3rem; */
+}
+.brand-gallery .imgs .img-container{
+    width: 25%;
+    margin: 1rem;
+}
+.brand-gallery .imgs .img-container img{
+    width: 90%;
+}
+@media(max-width:992px){
+    .brand-gallery .imgs .img-container{
+        width: 42%;
+    
+    }
+    .brand-gallery .imgs .img-container img{
+       width: 100%;
+    }
+}
+/* start other-services section style    ----------------------------- */
+.other-services h2{
+    font-size: 5rem;
+    line-height: 1.4;
+    border-right:5px solid var(--main-color);
+}
+.other-services .title{
+    margin-right: 2rem;
+    width: 40%;
+}
+.other-services ul{
+    list-style: none;
+}
+.other-services ul li {
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: 700;
+}
+
+@media(max-width:992px){
+    .other-services{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .other-services h2{
+        font-size: 2.5rem;
+        border-right: none;
+        line-height: 2;
+       
+    }
+    .other-services .title{
+        border-bottom: 5px solid var(--main-color);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    .other-services ul{
+        padding: 0;
+        
+    }
+    .other-services ul li{
+        font-size: 1rem;
+    }
+    .other-services-content{
+        flex-direction: column;
+    }
+
+
+}
+/* start our-projects page style ----------------------------------------- */
+.our-projects {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.our-projects nav{
+    border-bottom: none !important;
+    margin-bottom: 2rem;
+}
+.our-projects nav button{
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    color: #000;
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+    padding: 0.5rem !important;
+}
+.our-projects .col-md-5{
+    margin-bottom: 2rem;
+}
+.our-projects .col-md-5 .pro-img{
+    width: 90%;
+}
+.our-projects .col-md-5 .pro-img img{
+    width: 100%;
+}
+#service-filter a {
+    text-decoration: none;
+}
+
+#service-filter a.active {
+    text-decoration: underline;
+}
+/* media query for our-projects section ------------------------ */
+@media(max-width:992px){
+    .our-projects h2{
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    .our-projects a{
+        font-size: 1.75rem;
+    }
+    .our-projects nav{
+        display: none;
+    }
+    .our-projects .col-md-5{
+        display: flex;
+        justify-content: center;
+    }
+  
+}
+/* start contact us page style --------------------------------- */
+.contact-banner{
+    position: relative;
+    /* height: 100vh; */
+
+    /* margin-bottom: -8rem; */
+}
+.contact-banner h2{
+    font-size: 4rem;
+}
+.contact-banner .form{
+    width:35%;
+}
+.contact-banner .form .input{
+    margin-bottom: 1.5rem;
+    width: 85%;
+  
+}
+.contact-banner .form .textarea{
+    margin-bottom: 1.5rem;
+}
+.contact-banner .form .input label{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.contact-banner .form input , .contact-banner .form textarea {
+    border: none !important;
+    border-radius: 1rem;
+
+}
+.contact-banner button{
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color:#fff;
+    padding: 0.75rem 4rem;
+    border-radius: 0.5rem;
+}
+ .contact-banner .contact-us-img{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top:9rem; 
+}
+.contact-banner .contact-us-img img{
+    width: 100%;
+
+} 
+/* media query for contact-page -------------------- */
+@media(max-width:992px){
+   
+    .contact-banner{
+       
+        padding-left: 2rem;
+        padding-right: 2rem;
+      
+
+    }
+
+    .contact-banner .form {
+        width:100%;
+
+
+    } 
+
+    .contact-banner .contact-us-img{
+        display: none ;
+    }
+
+    .contact-banner .form .textarea , .contact-banner .form .input{
+        width:100%;
+    }
+}
+
+/* start gallery img page ----------------- */
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #banner  .over-lay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.gallery .row .img {
+    margin-bottom: 2rem;
+}
+.gallery .row img {
+    height: 30rem;
+}
+.gallery .img{
+    position: relative;
+}
+.gallery .description {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 70%;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    padding: 1rem;
+    
+}
+.gallery .description p{
+   font-size: 1rem;
+   color: #fff;
+ 
+}
+/* start footer section  ---------------------------------------------*/
+footer{
+    padding-top: 6rem;
+    
+    
+}
+footer h2{
+    font-size: 6rem;
+    font-weight: 700;
+}
+footer a{
+    font-size: 4rem;
+    color: #314C9F80;
+    font-weight: 700;
+    margin-bottom: 8rem;
+}
+footer .footer-img {
+  width: 100%;
+  position: relative;
+}
+footer .footer-img img{
+    width:100%;
+  
+}
+footer .footer-img .desktop-img{
+    height: 59vh;
+}
+footer .logo{
+
+
+  position: absolute;
+  top: 100%;
+  margin-top: 5rem;
+  z-index: 777;
+}
+.contact-link{
+    padding-bottom: 5rem;
+}
+footer .logo img{
+    width:35rem;
+    /* width: 100%; */
+}
+.footer-content{
+   margin-bottom: 9rem;
+   padding-bottom: 6rem;
+
+}
+@media(max-width:992px){
+    .footer-content{
+        margin-bottom: 4rem;
+        padding-bottom: 7rem;
+     
+     }
+    footer .footer-content h2{
+        font-size: 2.5rem;
+    }
+    footer .footer-content a{
+        font-size: 2.25rem;
+        margin-bottom: 0;
+    }
+    footer .desktop-img{
+        display: none;
+
+    }
+    footer .mob-img{
+        display: block !important;
+        height: 450px;
+    }
+    footer .logo img{
+        width:25rem;
+    }
+   
+      footer .logo{
+          top: 70% ;
+          
+        }
+    }
+
+/* start banner style ---------------------------------------- */
+
+
+
+
+
